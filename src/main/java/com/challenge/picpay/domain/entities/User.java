@@ -1,5 +1,7 @@
 package com.challenge.picpay.domain.entities;
 
+import com.challenge.picpay.domain.enums.UserRole;
+
 import java.util.UUID;
 
 public class User {
@@ -8,16 +10,26 @@ public class User {
     private String cpf;
     private String email;
     private String hashedPassword;
+    private UserRole role;
 
-    public User(UUID id, String fullName, String cpf, String email, String hashedPassword) {
+    public User(UUID id, String fullName, String cpf, String email, String hashedPassword, UserRole role) {
         this.id = id;
         this.fullName = fullName;
         this.cpf = cpf;
         this.email = email;
         this.hashedPassword = hashedPassword;
+        this.role = role;
     }
 
     public User() {
+    }
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 
     public UUID getId() {

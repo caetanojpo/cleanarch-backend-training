@@ -1,7 +1,7 @@
 package com.challenge.picpay.domain.expections;
 
-public class UserException extends RuntimeException {
-    public UserException(String message) {
+public class EntityNotFoundException extends RuntimeException {
+    public EntityNotFoundException(String message) {
         super(message);
     }
 }
